@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test_job:
+    name: Executando o Job de Teste
+    runs-on: self-hosted
+    steps:
+      - name: Step 01
+        uses: actions/checkout@v3
+      
+      - name: Step 02
+        run: echo "Executando o workflow em um runner auto hospedado"
